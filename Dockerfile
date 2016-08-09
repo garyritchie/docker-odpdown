@@ -9,4 +9,8 @@ RUN cd /odpdown \
   && pip install -r requirements.txt \
   && python setup.py install
 
+RUN mkdir /convert
+VOLUME /convert
+WORKDIR /convert
+
 CMD [ "python", "odpdown" ]
